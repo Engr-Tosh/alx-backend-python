@@ -1,47 +1,23 @@
-# Python Generators Project
+# Python Generators — ALX Backend Project
 
-This directory contains Python scripts and resources developed to practice and demonstrate the use of Python generators, database interaction, and other backend concepts.
+This directory contains scripts and utilities related to Python generators, used to interact with MySQL databases in a memory-efficient manner.
 
-## Current Script(s)
+## Tasks
 
-### `main.py`
+* **Database Setup & Seeding**: Scripts to create a MySQL database, create tables, and insert seed data from CSV.
+* **Streaming Generator**: Uses a generator to yield rows from the `user_data` table one at a time using `yield`.
 
-* Establishes a connection to a MySQL server
-* Creates a database (`ALX_prodev`) if it does not exist
-* Creates a table `user_data` with the following fields:
+## Highlights
 
-  * `user_id` (Auto-increment Primary Key)
-  * `name` (VARCHAR)
-  * `email` (VARCHAR)
-  * `age` (DECIMAL)
-* Inserts sample data from a CSV file into the table
-* Fetches and prints the first 5 records
+* Secure database credentials via `.env` and `python-dotenv`
+* MySQL connector with proper error handling and cursor management
+* Generator-based iteration for scalable row streaming
 
-### `seed.py`
+More tasks will be added and the README refined as progress continues.
 
-* Contains reusable functions for:
+---
 
-  * Connecting to MySQL server
-  * Creating database and tables
-  * Connecting to the `ALX_prodev` database
-  * Inserting data into the `user_data` table
+> Make sure to activate your virtual environment and install dependencies manually for now using:
+> `pip install mysql-connector-python python-dotenv`
+> A `requirements.txt` file will be added later.
 
-## Directory Structure
-
-```
-python-generators-0x00/
-├── main.py
-├── seed.py
-├── user_data.csv
-└── README.md
-```
-
-## Requirements
-
-* Python 3.10+
-* `mysql-connector-python`
-* MySQL server running locally
-
-## Notes
-
-This README will be updated and refined as more scripts and generator-based features are added to this project.
